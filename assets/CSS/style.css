@@ -1,0 +1,412 @@
+ 
+ /*----------------------------
+  * humbergerメニュー本体
+  *----------------------------*/
+ .menu {
+   display: flex;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   width: 20vw;
+   height: 100vh;
+   
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background: #989696;
+ }
+
+ .menu__item {
+   width: 100%;
+   height: auto;
+   padding: .5em 1em;
+   text-align: center;
+   color: #fff;
+   box-sizing: border-box;
+ }
+
+ /*----------------------------
+  * humbergerアニメーション部分
+  *----------------------------*/
+
+ /* アニメーション前のメニューの状態 */
+ .menu {
+   transform: translateX(-100%);
+   transition: all .3s linear;
+ }
+
+ /* アニメーション後のメニューの状態 */
+ .menu.is-active {
+   transform: translateX(0);
+ }
+
+ /*----------------------------
+  ヘッダー部分
+*----------------------------*/
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* ヘッダーを最前面に配置するための値 */
+  align-items: center;
+  background-color: #e5dfdf;
+  color: #555;
+  height: 20px;
+  padding: 20px;   
+}
+
+.header-menu {
+  display: flex;
+  width: 100%;   
+  justify-content: space-between;
+  
+}
+
+.menu-btn {
+  top: 50%;
+  right: 20px;   /* 適切な位置に調整 */
+  transform: translateY(-50%);
+}
+
+.title {
+  font-family: 'Great Vibes', cursive; /* カフェっぽいフォントに変更 */
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影の設定 */
+  margin-left: 20px;
+  font-size: 35px;   /* 好みのサイズに調整 */
+
+  }
+
+.nav {
+  display: flex;
+  list-style: none;
+  font-family: 'Great Vibes', cursive; /* カフェっぽいフォントに変更 */
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15vh;  /* 項目の位置 */
+}
+
+.nav>li>a {
+  color: #555;
+  font-size: 15px;
+  margin-left: 40px;
+  text-decoration: none;
+ }
+ .nav li a:hover {
+   color: white; /* ホバー時の色を指定 */
+ }
+
+ /* .next{
+  display: flex;
+  list-style: none;
+  font-family: 'Great Vibes', cursive; /* カフェっぽいフォントに変更 */
+  /* justify-content: center;
+  align-items: center;
+ 
+ } */ 
+
+ /*----------------------------
+  * メイン部分
+  *----------------------------*/
+ #section1>h2,
+ #section2>h2 {
+   font-size: 40px;
+   text-align: center;
+   color: gray;
+   padding-top: 40px;
+ }
+
+ .contents>img {
+   height: 200px;
+ }
+
+ .contents {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-content: center;
+   margin-top: 20px;
+   margin: 30px auto;
+ }
+
+ .discription {
+   width: 60%;
+   margin: 20px;
+ }
+ 
+
+ /*----------------------------
+  .Welcomeの文字アニメーション部分
+*----------------------------*/
+
+ @keyframes increaseSize {
+   0% {
+     font-size: 30px;
+   }
+
+   /* 開始時のフォントサイズ */
+   100% {
+     font-size: 70px;
+   }
+
+   /* 終了時のフォントサイズ */
+ }
+
+ .Welcome {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Caveat', cursive;
+   /* フォントを指定 */
+   /* font-weight: bold;
+   太字にする */
+   font-style: normal;
+   /* 斜体を解除する */
+   color: white;
+   /* 好みの色を指定 */
+
+   animation-name: increaseSize;
+   /* アニメーション名を指定 */
+   animation-duration: 3s;
+   /* アニメーションの実行時間 */
+   animation-timing-function: linear;
+   /* アニメーションのタイミング関数 */
+   animation-fill-mode: forwards;
+   /* アニメーション終了時のスタイルを保持 */
+
+ }
+
+
+ /* top-imgのfadeinアニメーション */
+ @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.top-img {
+  display: flex;
+  background-image: url("../IMG/drink-gc445e5aa3_1280.jpg");
+  background-size: 95%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  margin-bottom: 50px;
+}
+
+ .Welcome {
+   text-align: center;
+ }
+
+ body {
+   background-color: #e5dfdf;
+   /* 背景色を指定 */
+ }
+
+  @keyframes fadeOut {
+   0% {
+     opacity: 1;
+   }
+
+   100% {
+     opacity: 0;
+   }
+ }
+
+ /* 文字に黒い枠線を追加 */
+ .text-with-border {
+   text-shadow: 2px 2px 0 black,
+     -2px 2px 0 black,
+     2px -2px 0 black,
+     -2px -2px 0 black;
+ }
+
+
+ /*----------------------------
+  Map
+*----------------------------*/
+
+  #map1,
+  #map2 {
+    font-size: 30px;
+    text-align: center;
+    color: gray;
+    padding-top: 40px;
+    margin: 30px;
+  }
+
+  .shopinfo{
+    font-size: 15px;
+  }
+
+ /*----------------------------
+  Link
+*----------------------------*/
+ #section1>h2 {
+   font-size: 40px;
+   text-align: center;
+   color: gray;
+   margin: 20px; 
+ }
+
+ .link1 {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 20px;
+  }
+
+  /*----------------------------
+  セブについて
+*----------------------------*/
+ .Cebu >p {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px;
+
+ }
+
+ .Cebu>img {
+  display: block;
+  margin: 0 auto;
+}
+  /*----------------------------
+* レスポンシブ対応
+*----------------------------*/
+/* レスポンシブデザイン用のメディアクエリ */
+@media screen and (max-width: 780px) {
+  .header-menu {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .nav li {
+    margin: 0 10px;
+  }
+  
+  .top-img {
+    height: 60vh;
+  }
+  
+  .Welcome {
+    font-size: 30px;
+  }
+  
+  .contents {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title{
+    font-size: 25px;
+  }
+}
+
+  /* 700px以下の画面サイズにヘッダーの項目を消す */
+@media screen and (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+}
+
+ /* 480px以下の画面サイズに適用するスタイル */
+@media screen and (max-width: 480px) { 
+  .title {
+    font-size: 15px;
+  }
+  
+  .nav li {
+    margin: 0 5px;
+  }
+  
+  
+  .top-img {
+    height: 40vh;
+  }
+  
+  .Welcome {
+    font-size: 20px;
+  }
+  
+  .contents {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+ /*----------------------------
+* humbergerメニュー開閉ボタン
+*----------------------------*/
+ .menu-btn {
+   display: flex;
+   position: relative;
+   top: 20px;
+   left: 20px;
+   z-index: 2;
+   width: 40px;
+   height: 40px;
+   
+   justify-content: center;
+   align-items: center;
+   background: #e5dfdf;
+   color: #514e4e;
+   border-radius: 30%;
+   transition: background-color 0.3s ease;
+   border: none;
+ }
+
+ .menu-btn:hover {
+   background-color: #a3a0a0;
+ }
+
+ .menu.is-active .menu-btn {
+   display: none;
+ }
+
+ /* アイコンのスタイル */
+ .menu-btn i {
+   font-size: 24px;
+ }
+
+ /*----------------------------
+  フッター部分
+*----------------------------*/
+ footer {
+  display: flex;
+   position: relative;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   
+   justify-content: center;
+   align-items: center;
+   height: 10px;
+   /* 適切な高さを指定 */
+   background-color: #f3f3f3;
+   /* フッターの背景色を指定 */
+   color: #555;
+   /* テキストの色を指定 */
+   padding: 20px;
+   /* フッターの内側の余白を指定 */
+   
+    bottom: 0; /*下に固定*/
+ }
